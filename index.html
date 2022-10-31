@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">    
+   <title>Lista de alumnos</title>
+   <link rel="stylesheet" href="estilo.css" />
+   <script src="app.js" type="text/javascript"></script>
+   
+
+ </head>
+ <body>
+ <header>
+	<h1>FORMULARIO DE ALUMNOS</h1>
+ </header>
+ 
+	<main>
+	
+		<section class="ingresoDatos">
+			<div><span>Nombre:</span><input type="text" id="nombre" /></div>
+			<div><span>DNI:</span><input type="number" id="dni" maxlength="8"  class="dni" /></div>
+			<div><span>Nota 1º Trimestres ( 0 al 10 )</span><input type="number" min="0" max="10" id="trimestreUno" maxlength="2" class="notas" /><em class="error" id="triuno"></em></div>
+			<div><span>Nota 2º Trimestres ( 0 al 10 )</span><input type="number" min="0" max="10" id="trimestreDos" maxlength="2" class="notas" /><em class="error" id="tridos"></em></div>
+			<div><span>Nota 1º rimestres ( 0 al 10 )</span><input type="number" min="0" max="10" id="trimestreTres" maxlength="2" class="notas" /><em class="error" id="tritres"></em></div>
+			<div><button onclick="crear()" keyup(crear())>AGREGAR</button> </div>
+	   </section>
+	   
+	   <section class="btn">			
+			<button onclick="listadodeAlumnos()">Lista de alumnos</button>
+			<button onclick="listaAlumnosAprobados()">Aprobados</button>
+			<button onclick="listadodeAlumnosDesaprobados()">Desaprobados</button>
+	   </section>
+	   
+	   <section class="muestraDatos">
+		   <h1 class="titulo" id="tituloLista">Lista de alumnos</h1>
+		   <table border="1">
+				<tr>
+					<th>NOMBRE</th>
+					<th class="dnitb">DNI</th>
+					<th>1º TRIMESTRE</th>
+					<th>2º TRIMESTRE</th>
+					<th>3º TRIMESTRES</th>
+					<th>PROMEDIO</th>
+				</tr>
+								
+			<!--	<tr id="listado">
+					<td></td>
+				</tr>
+			-->
+		   </table>
+		 <div class="listado"><div id="listado"></div></div>
+		   
+	   </section>
+	</main>
+   
+ </body>
+ </html>
